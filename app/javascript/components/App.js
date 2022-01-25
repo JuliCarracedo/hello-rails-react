@@ -13,7 +13,7 @@ const App = () => {
         <BrowserRouter>
           <Routes>
             <Route exact path='/' element={<>Welcome to my app</>} />
-            <Route path='/greet' element={<Greeting />} />
+            <Route path='/greetings' element={<Greeting />} />
           </Routes>
         </BrowserRouter>
       </Provider>

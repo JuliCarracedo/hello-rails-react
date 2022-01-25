@@ -45,7 +45,7 @@ To get a local copy up and running follow these simple example steps.
     - Deploy running ```rails s -p 3000```
     - Open localhost:3000 in your browser
     - Whenever you navigate to the index page, you'll see the home screen
-    - localhost:3000/greetings will show  a different greeting every time you open it
+    - localhost:3000/greet will show  a different greeting every time you open it
     - localhost:3000/v1/greetings is the API endpoing rendering the list of greetings
 
 ## Author

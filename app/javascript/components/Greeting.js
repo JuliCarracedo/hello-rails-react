@@ -1,13 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
-class Greeting extends React.Component {
-  render () {
+const Greeting = (props) => {
+  const { message } = props;
     return (
       <React.Fragment>
-        Message: {this.props.message}
+        Message: {message}
       </React.Fragment>
     );
-  }
 }
 
 Greeting.propTypes = {

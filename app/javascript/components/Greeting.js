@@ -1,15 +1,21 @@
 import React from "react"
-import PropTypes from "prop-types"
-const Greeting = (props) => {
-  const { message } = props;
+import { useDispatch, useSelector } from 'react-redux'
+import { useEffect } from "react";
+import { getGreetingsRequest } from "../redux/greetings/greetingsReducer";
+const Greeting = () => {
+
+    const dispatch = useDispatch();
+    useEffect(()=>{
+      dispatch(getGreetingsRequest());
+    },[]);
+
+    const { greetings, loading } = useSelector(state => state.greetings );
+    console.log(greetings, loading)
     return (
       <React.Fragment>
-        Message: {message}
+        Message: This is a message
       </React.Fragment>
     );
 }
 
-Greeting.propTypes = {
-  message: PropTypes.string
-};
 export default Greeting

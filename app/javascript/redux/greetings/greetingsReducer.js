@@ -6,16 +6,16 @@ const initialState = {
 }
 
 export const getGreetingsRequest = () => ({
-    action: GET_GREETINGS_REQUEST,
+    type: GET_GREETINGS_REQUEST,
 })
 export const getGreetingsSuccess = (payload) => ({
-    action: GET_GREETINGS_SUCCESS,
+    type: GET_GREETINGS_SUCCESS,
     payload
 })
 
 const greetingsReducer = (state = initialState, action) =>{
     switch(action.type){
-        case GET_GREETINGS_REQUEST: return {...state, loading: true}
+        case GET_GREETINGS_REQUEST: console.log('request dispatched') ;return {...state, loading: true}
         case GET_GREETINGS_SUCCESS: return {...state, greetings: action.payload}
         default: return state
     }

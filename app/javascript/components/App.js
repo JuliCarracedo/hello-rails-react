@@ -7,7 +7,7 @@ import store from "../redux/configureStore";
 
 
 const App = () => {
-
+  console.log(store)
     return (
       <Provider store={store} >
         <BrowserRouter>
